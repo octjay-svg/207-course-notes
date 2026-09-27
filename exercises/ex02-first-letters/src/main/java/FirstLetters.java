@@ -26,6 +26,15 @@ public class FirstLetters {
      */
     public static String firstLetters(String words) {
         // TODO: complete
-        return "";
+        String fl = "";
+        for (int i = 0; i < words.length(); i++) {
+            if (words.charAt(i) != ' ') {
+                fl += words.charAt(i);
+                do {
+                    i++;
+                } while (i < words.length() && words.charAt(i) != ' ');
+            }
+        }
+        return fl;
     }
 }
